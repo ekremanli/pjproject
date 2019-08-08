@@ -109,7 +109,7 @@ typedef struct pjsip_cfg_t
 	 *
 	 * Default is PJSIP_DONT_SWITCH_TO_TCP.
 	 */
-	pj_bool_t disable_tcp_switch;
+	pj_bool_t disable_tcp_switch = PJ_TRUE;
 
 	/**
 	 * Disable automatic switching to TLS if target-URI does not use
@@ -379,7 +379,7 @@ PJ_INLINE(pjsip_cfg_t*) pjsip_cfg(void)
  * Default is 0 (no).
  */
 #ifndef PJSIP_DONT_SWITCH_TO_TCP
-#   define PJSIP_DONT_SWITCH_TO_TCP	0
+#   define PJSIP_DONT_SWITCH_TO_TCP	1
 #endif
 
 
